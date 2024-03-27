@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
 const Link = styled.a`
   color: #9924ed;
   text-decoration: none;
@@ -22,7 +29,7 @@ const Social = styled.div`
 
 export function Footer() {
   return (
-    <>
+    <Wrapper>
       <Paragraph>
         Developed by{' '}
         <Link href='https://www.jameem.dev/' target='_blank'>
@@ -37,6 +44,6 @@ export function Footer() {
           <img src='linkedin.png' alt='linkedin' />
         </a>
       </Social>
-    </>
+    </Wrapper>
   );
 }
